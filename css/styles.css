@@ -881,7 +881,7 @@ img {
 .process-timeline::before {
     content: '';
     position: absolute;
-    top: 60px;
+    top: 100px;
     left: 12.5%;
     right: 12.5%;
     height: 3px;
