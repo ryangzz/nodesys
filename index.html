@@ -1597,61 +1597,68 @@
                 </div>
                 <div class="col-lg-7" data-aos="fade-left">
                     <form class="contact-form" id="contactForm">
+                        <!-- Web3Forms -->
+                        <input type="hidden" name="access_key" value="ba1df38d-771d-450a-b53d-96278a27609e">
+                        <input type="hidden" name="subject" value="Nuevo contacto desde nodesys.com.mx">
+                        <input type="hidden" name="from_name" value="Nodesys Web">
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                        <!-- Honeypot anti-spam -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display:none">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Tu nombre" required>
                                     <label for="name">Nombre completo</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="tu@email.com" required>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="tu@email.com" required>
                                     <label for="email">Correo electrónico</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="tel" class="form-control" id="phone" placeholder="+52">
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="+52">
                                     <label for="phone">Teléfono</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <select class="form-select" id="service" required>
+                                    <select class="form-select" id="service" name="service" required>
                                         <option value="" selected disabled>Seleccionar</option>
-                                        <option value="web">Diseño Web</option>
-                                        <option value="mobile">App Móvil</option>
-                                        <option value="erp">Sistema ERP</option>
-                                        <option value="crm">Sistema CRM</option>
-                                        <option value="ecommerce">E-Commerce</option>
-                                        <option value="custom">Software a la Medida</option>
-                                        <option value="other">Otro</option>
+                                        <option value="Diseño Web">Diseño Web</option>
+                                        <option value="App Móvil">App Móvil</option>
+                                        <option value="Sistema ERP">Sistema ERP</option>
+                                        <option value="Sistema CRM">Sistema CRM</option>
+                                        <option value="E-Commerce">E-Commerce</option>
+                                        <option value="Software a la Medida">Software a la Medida</option>
+                                        <option value="Otro">Otro</option>
                                     </select>
                                     <label for="service">Servicio de interés</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="company" placeholder="Empresa">
+                                    <input type="text" class="form-control" id="company" name="company" placeholder="Empresa">
                                     <label for="company">Empresa</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <select class="form-select" id="budget">
+                                    <select class="form-select" id="budget" name="budget">
                                         <option value="" selected disabled>Seleccionar</option>
-                                        <option value="1-5k">$1,000 - $5,000 USD</option>
-                                        <option value="5-15k">$5,000 - $15,000 USD</option>
-                                        <option value="15-50k">$15,000 - $50,000 USD</option>
-                                        <option value="50k+">$50,000+ USD</option>
+                                        <option value="$1,000 - $5,000 USD">$1,000 - $5,000 USD</option>
+                                        <option value="$5,000 - $15,000 USD">$5,000 - $15,000 USD</option>
+                                        <option value="$15,000 - $50,000 USD">$15,000 - $50,000 USD</option>
+                                        <option value="$50,000+ USD">$50,000+ USD</option>
                                     </select>
                                     <label for="budget">Presupuesto estimado</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" id="message" placeholder="Cuéntanos" style="height: 130px" required></textarea>
+                                    <textarea class="form-control" id="message" name="message" placeholder="Cuéntanos" style="height: 130px" required></textarea>
                                     <label for="message">Cuéntanos sobre tu proyecto</label>
                                 </div>
                             </div>

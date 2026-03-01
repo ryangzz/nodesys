@@ -287,31 +287,50 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             const btn = this.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
             
-            // Simular envío
             btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Enviando...';
             btn.disabled = true;
             
-            setTimeout(() => {
-                btn.innerHTML = '<i class="bi bi-check-circle me-2"></i>¡Mensaje Enviado!';
-                btn.classList.remove('btn-gradient');
-                btn.style.background = '#00b894';
-                btn.style.border = 'none';
+            try {
+                const formData = new FormData(contactForm);
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
                 
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.classList.add('btn-gradient');
-                    btn.style.background = '';
-                    btn.style.border = '';
-                    btn.disabled = false;
+                if (data.success) {
+                    btn.innerHTML = '<i class="bi bi-check-circle me-2"></i>¡Mensaje Enviado!';
+                    btn.classList.remove('btn-gradient');
+                    btn.style.background = '#00b894';
+                    btn.style.border = 'none';
                     contactForm.reset();
-                }, 3000);
-            }, 2000);
+                    
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.classList.add('btn-gradient');
+                        btn.style.background = '';
+                        btn.style.border = '';
+                        btn.disabled = false;
+                    }, 3000);
+                } else {
+                    throw new Error(data.message || 'Error al enviar');
+                }
+            } catch (error) {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error al enviar',
+                    text: 'Hubo un problema al enviar tu mensaje. Por favor intenta de nuevo o contáctanos por WhatsApp.',
+                    confirmButtonColor: '#013b84'
+                });
+            }
         });
     }
 
@@ -359,17 +378,37 @@ document.addEventListener('DOMContentLoaded', function() {
     // =============================================
     const newsletterForm = document.querySelector('.footer-newsletter');
     if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
+        newsletterForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             const input = this.querySelector('input');
             const btn = this.querySelector('button');
             
             if (input.value) {
-                btn.innerHTML = '<i class="bi bi-check-lg"></i>';
-                input.value = '';
+                btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span>';
+                btn.disabled = true;
+                
+                try {
+                    const formData = new FormData();
+                    formData.append('access_key', 'ba1df38d-771d-450a-b53d-96278a27609e');
+                    formData.append('subject', 'Nueva suscripción newsletter — nodesys.com.mx');
+                    formData.append('from_name', 'Nodesys Newsletter');
+                    formData.append('email', input.value);
+                    formData.append('message', 'Solicitud de suscripción al newsletter de Nodesys');
+                    
+                    await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    btn.innerHTML = '<i class="bi bi-check-lg"></i>';
+                    input.value = '';
+                } catch (err) {
+                    btn.innerHTML = '<i class="bi bi-x-lg"></i>';
+                }
                 
                 setTimeout(() => {
                     btn.innerHTML = '<i class="bi bi-send"></i>';
+                    btn.disabled = false;
                 }, 2000);
             }
         });
@@ -542,9 +581,30 @@ function solicitarInfo(solucion) {
             }
             return { nombre, email, telefono, mensaje, solucion };
         }
-    }).then((result) => {
+    }).then(async (result) => {
         if (result.isConfirmed) {
             const d = result.value;
+
+            // Enviar datos por Web3Forms
+            try {
+                const formPayload = new FormData();
+                formPayload.append('access_key', 'ba1df38d-771d-450a-b53d-96278a27609e');
+                formPayload.append('subject', `Interés en ${d.solucion} — nodesys.com.mx`);
+                formPayload.append('from_name', 'Nodesys Web');
+                formPayload.append('name', d.nombre);
+                formPayload.append('email', d.email);
+                formPayload.append('phone', d.telefono);
+                formPayload.append('solution', d.solucion);
+                formPayload.append('message', d.mensaje || `Me interesa la solución: ${d.solucion}`);
+
+                await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formPayload
+                });
+            } catch (err) {
+                // Silencioso: el WhatsApp sirve de respaldo
+            }
+
             const waText = encodeURIComponent(
                 `¡Hola Nodesys! 👋\n\nMe interesa: *${d.solucion}*\n\nNombre: ${d.nombre}\nCorreo: ${d.email}${d.telefono ? '\nTeléfono: ' + d.telefono : ''}${d.mensaje ? '\nMensaje: ' + d.mensaje : ''}`
             );
@@ -553,7 +613,7 @@ function solicitarInfo(solucion) {
             Swal.fire({
                 icon: 'success',
                 title: '¡Gracias por tu interés!',
-                html: `<p>Hemos recibido tu solicitud sobre <strong>${d.solucion}</strong>. También puedes contactarnos directamente:</p>`,
+                html: `<p>Hemos recibido tu solicitud sobre <strong>${d.solucion}</strong>. Un asesor te contactará pronto. También puedes escribirnos directamente:</p>`,
                 confirmButtonText: '<i class="bi bi-whatsapp"></i> Enviar por WhatsApp',
                 confirmButtonColor: '#25d366',
                 showCancelButton: true,
