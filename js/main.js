@@ -389,7 +389,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 try {
                     const formData = new FormData();
-                    formData.append('access_key', 'ba1df38d-771d-450a-b53d-96278a27609e');
+                    formData.append('access_key', '7efc62f7-81ac-4edd-bf7d-cb4c4e1bcd46');
                     formData.append('subject', 'Nueva suscripción newsletter — nodesys.com.mx');
                     formData.append('from_name', 'Nodesys Newsletter');
                     formData.append('email', input.value);
@@ -588,7 +588,7 @@ function solicitarInfo(solucion) {
             // Enviar datos por Web3Forms
             try {
                 const formPayload = new FormData();
-                formPayload.append('access_key', 'ba1df38d-771d-450a-b53d-96278a27609e');
+                formPayload.append('access_key', '7efc62f7-81ac-4edd-bf7d-cb4c4e1bcd46');
                 formPayload.append('subject', `Interés en ${d.solucion} — nodesys.com.mx`);
                 formPayload.append('from_name', 'Nodesys Web');
                 formPayload.append('name', d.nombre);
