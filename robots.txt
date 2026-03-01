@@ -1,0 +1,30 @@
+# Robots.txt para Nodesys - www.nodesys.com.mx
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://nodesys.com.mx/sitemap.xml
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Google Images
+User-agent: Googlebot-Image
+Allow: /img/
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.webp$
+Allow: /*.svg$

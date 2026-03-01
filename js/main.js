@@ -361,3 +361,105 @@ document.addEventListener('DOMContentLoaded', function() {
     document.head.appendChild(style);
 
 });
+
+// =============================================
+// MODALES LEGALES (Términos y Privacidad)
+// =============================================
+function showTerminos() {
+    Swal.fire({
+        title: '<strong>Términos de Uso</strong>',
+        imageUrl: 'img/logo2.png',
+        imageWidth: 200,
+        imageAlt: 'Nodesys Logo',
+        html: `
+            <div style="text-align:left; max-height:400px; overflow-y:auto; font-size:14px; line-height:1.6;">
+                <h3>1. Uso del Sitio</h3>
+                <p>El acceso y uso de https://nodesys.com.mx está sujeto a los presentes términos.
+                Al navegar en este sitio web, usted acepta cumplirlos.</p>
+
+                <h3>2. Propiedad Intelectual</h3>
+                <p>Todo el contenido (textos, imágenes, logotipos, código fuente, diseño) es propiedad
+                de Nodesys y está protegido por las leyes de propiedad intelectual de México.</p>
+
+                <h3>3. Servicios</h3>
+                <p>Nodesys se reserva el derecho de modificar o discontinuar sus servicios en cualquier
+                momento sin previo aviso.</p>
+
+                <h3>4. Limitación de Responsabilidad</h3>
+                <p>Nodesys no será responsable de daños directos o indirectos derivados del uso de este sitio web.</p>
+
+                <h3>5. Enlaces a Terceros</h3>
+                <p>Este sitio puede contener enlaces a sitios web de terceros. Nodesys no es responsable del
+                contenido ni de las prácticas de privacidad de dichos sitios.</p>
+
+                <h3>6. Modificaciones</h3>
+                <p>Nos reservamos el derecho de actualizar los presentes términos en cualquier momento.
+                Las modificaciones serán efectivas al publicarse en el sitio.</p>
+
+                <h3>7. Legislación Aplicable</h3>
+                <p>Los presentes términos se rigen por las leyes de México, sometiendo cualquier
+                controversia a los tribunales competentes de Monterrey, Nuevo León.</p>
+
+                <h3>8. Contacto</h3>
+                <p>Para consultas: <a href="mailto:contacto@nodesys.com.mx">contacto@nodesys.com.mx</a></p>
+            </div>
+        `,
+        width: 700,
+        confirmButtonText: 'Entendido',
+        confirmButtonColor: '#013b84',
+        showCloseButton: true,
+    });
+}
+
+function showPrivacidad() {
+    Swal.fire({
+        title: '<strong>Política de Privacidad</strong>',
+        imageUrl: 'img/logo2.png',
+        imageWidth: 200,
+        imageAlt: 'Nodesys Logo',
+        html: `
+            <div style="text-align:left; max-height:400px; overflow-y:auto; font-size:14px; line-height:1.6;">
+                <h3>1. Información que Recopilamos</h3>
+                <p>A través de nuestro formulario de contacto, recopilamos: nombre, correo electrónico,
+                teléfono, empresa, servicio de interés y mensaje. Esta información se proporciona de forma voluntaria.</p>
+
+                <h3>2. Uso de la Información</h3>
+                <p>La información se utiliza exclusivamente para: responder consultas, proporcionar
+                información sobre nuestros servicios y mejorar la experiencia del usuario.</p>
+
+                <h3>3. Protección de Datos</h3>
+                <p>Implementamos medidas de seguridad técnicas (HTTPS/TLS) para proteger su información
+                personal contra acceso no autorizado.</p>
+
+                <h3>4. Cookies y Tecnologías de Rastreo</h3>
+                <p>Este sitio puede utilizar cookies de análisis para comprender el comportamiento
+                de los usuarios. Puede desactivar las cookies en la configuración de su navegador.</p>
+
+                <h3>5. Compartición de Datos</h3>
+                <p>Nodesys no vende, alquila ni comparte información personal con terceros, excepto
+                cuando sea requerido por ley.</p>
+
+                <h3>6. Derechos del Titular (ARCO)</h3>
+                <p>Usted tiene derecho a acceder, rectificar, cancelar u oponerse al tratamiento de sus
+                datos personales (Derechos ARCO conforme a la LFPDPPP). Para ejercerlos, contacte a:
+                <a href="mailto:privacidad@nodesys.com.mx">privacidad@nodesys.com.mx</a></p>
+
+                <h3>7. Retención de Datos</h3>
+                <p>Los datos se conservan únicamente el tiempo necesario para cumplir con los fines para los
+                que fueron recopilados.</p>
+
+                <h3>8. Cambios a esta Política</h3>
+                <p>Nos reservamos el derecho de modificar esta política. Las actualizaciones se publicarán
+                en esta misma sección.</p>
+
+                <h3>9. Contacto</h3>
+                <p>Para consultas sobre privacidad: <a href="mailto:privacidad@nodesys.com.mx">privacidad@nodesys.com.mx</a></p>
+                <p>Última actualización: 28 de febrero de 2026</p>
+            </div>
+        `,
+        width: 700,
+        confirmButtonText: 'Entendido',
+        confirmButtonColor: '#013b84',
+        showCloseButton: true,
+    });
+}

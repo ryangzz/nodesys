@@ -1,24 +1,347 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NodeSys — Soluciones Tecnológicas a la Medida</title>
-    <meta name="description" content="NodeSys: Transformamos empresas con tecnología. Desarrollo de aplicaciones móviles, diseño web, ERP, CRM, CMS y soluciones a medida desde 2021.">
-    <meta name="keywords" content="tecnología, ERP, CRM, desarrollo web, aplicaciones móviles, software a medida, NodeSys">
-    
+
+    <!-- =============================================
+         SEO: TÍTULO Y META DESCRIPCIÓN
+    ============================================= -->
+    <title>Nodesys | Desarrollo de Software a Medida en Monterrey, México | ERP, CRM, Apps</title>
+    <meta name="description" content="Nodesys es una empresa de desarrollo de software, web, sistemas y aplicaciones a la medida en Monterrey. Ofrecemos ERP, CRM, apps móviles, e-commerce y diseño web desde 2019." />
+    <meta name="keywords" content="desarrollo de software a medida, desarrollo de sistemas, desarrollo de aplicaciones moviles, desarrollo web, desarrollo de software en México, consultoría tecnológica MTY, soluciones IT para empresas, Nodesys, nodesys.com.mx, Node.js, React, Vue, Laravel, Cloud Computing, AWS, Arquitectura de Microservicios, ERP, CRM, apps móviles, e-commerce, diseño web, Monterrey, Nuevo León" />
+
+    <!-- =============================================
+         SEO: METAS DE CONTROL Y RASTREO
+    ============================================= -->
+    <meta name="author" content="Nodesys" />
+    <meta name="copyright" content="Nodesys © 2019-2026" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow" />
+    <meta name="rating" content="general" />
+    <meta name="distribution" content="global" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="language" content="es" />
+    <meta name="coverage" content="Worldwide" />
+    <meta name="target" content="all" />
+
+    <!-- =============================================
+         SEO: METAS DE DISPOSITIVOS MÓVILES
+    ============================================= -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="theme-color" content="#013b84" />
+    <meta name="msapplication-TileColor" content="#013b84" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Nodesys" />
+    <meta name="application-name" content="Nodesys" />
+    <meta name="format-detection" content="telephone=yes" />
+
+    <!-- =============================================
+         SEO: METAS DE CLASIFICACIÓN
+    ============================================= -->
+    <meta name="subject" content="Empresa de desarrollo de software, web, sistemas y aplicaciones a la medida" />
+    <meta name="abstract" content="Nodesys - Empresa de desarrollo de software, web, sistemas y aplicaciones a la medida en Monterrey. ERP, CRM, apps móviles, e-commerce, diseño web y consultoría tecnológica." />
+    <meta name="classification" content="Business, Technology" />
+    <meta name="category" content="Technology" />
+
+    <!-- =============================================
+         SEO: GEOLOCALIZACIÓN
+    ============================================= -->
+    <meta name="geo.region" content="MX-NLE" />
+    <meta name="geo.placename" content="Monterrey, Nuevo León, México" />
+    <meta name="geo.position" content="25.68435;-100.31721" />
+    <meta name="ICBM" content="25.68435, -100.31721" />
+
+    <!-- =============================================
+         SEO: URL CANÓNICA Y HREFLANG
+    ============================================= -->
+    <link rel="canonical" href="https://nodesys.com.mx/" />
+    <link rel="alternate" hreflang="es" href="https://nodesys.com.mx/" />
+    <link rel="alternate" hreflang="es-MX" href="https://nodesys.com.mx/" />
+    <link rel="alternate" hreflang="x-default" href="https://nodesys.com.mx/" />
+
+    <!-- =============================================
+         SEO: OPEN GRAPH (Facebook, LinkedIn, WhatsApp)
+    ============================================= -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Nodesys" />
+    <meta property="og:title" content="Nodesys | Desarrollo de Software a Medida en Monterrey" />
+    <meta property="og:description" content="Nodesys es una empresa de desarrollo de software, web, sistemas y aplicaciones a la medida en Monterrey. ERP, CRM, apps móviles y más desde 2019." />
+    <meta property="og:url" content="https://nodesys.com.mx/" />
+    <meta property="og:image" content="https://nodesys.com.mx/img/logo2.png" />
+    <meta property="og:image:alt" content="Nodesys - Empresa de desarrollo de software" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="fb:app_id" content="61580979374712" />
+
+    <!-- =============================================
+         SEO: TWITTER CARD
+    ============================================= -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nodesys | Desarrollo de Software a Medida en Monterrey" />
+    <meta name="twitter:description" content="Nodesys es una empresa de desarrollo de software, web, sistemas y aplicaciones a la medida en Monterrey. ERP, CRM, apps móviles y más desde 2019." />
+    <meta name="twitter:image" content="https://nodesys.com.mx/img/logo2.png" />
+    <meta name="twitter:image:alt" content="Nodesys - Empresa de desarrollo de software" />
+
+    <!-- =============================================
+         SEO: DATOS ESTRUCTURADOS JSON-LD
+    ============================================= -->
+    <!-- Schema: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Nodesys",
+      "alternateName": ["Nodesys", "nodesys.com.mx"],
+      "url": "https://nodesys.com.mx",
+      "logo": "https://nodesys.com.mx/img/logo2.png",
+      "image": "https://nodesys.com.mx/img/logo2.png",
+      "description": "Empresa de desarrollo de software, web, sistemas y aplicaciones a la medida. Transformamos empresas con tecnología inteligente desde 2019.",
+      "foundingDate": "2019",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Principal 123, Col. Centro",
+        "addressLocality": "Monterrey",
+        "addressRegion": "Nuevo León",
+        "postalCode": "64000",
+        "addressCountry": "MX"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Monterrey, Nuevo León, México",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "25.68435",
+          "longitude": "-100.31721"
+        }
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+528122930709",
+          "contactType": "sales",
+          "email": "contacto@nodesys.com.mx",
+          "availableLanguage": ["Spanish", "English"],
+          "areaServed": "Worldwide"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/nodesys.com.mx/",
+        "https://www.linkedin.com/company/nodesys/"
+      ],
+      "knowsAbout": [
+        "Desarrollo de Software a Medida",
+        "Desarrollo de Aplicaciones Móviles",
+        "Sistemas ERP y CRM",
+        "Diseño Web y UX/UI",
+        "E-Commerce",
+        "Consultoría Tecnológica"
+      ]
+    }
+    </script>
+
+    <!-- Schema: ProfessionalService -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Nodesys",
+      "image": "https://nodesys.com.mx/img/logo2.png",
+      "url": "https://nodesys.com.mx",
+      "telephone": "+528122930709",
+      "email": "contacto@nodesys.com.mx",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Principal 123, Col. Centro",
+        "addressLocality": "Monterrey",
+        "addressRegion": "Nuevo León",
+        "postalCode": "64000",
+        "addressCountry": "MX"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "25.68435",
+        "longitude": "-100.31721"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Nodesys",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Desarrollo de Software",
+              "description": "Creamos soluciones robustas y escalables adaptadas a tus procesos de negocio."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Aplicaciones Móviles",
+              "description": "Desarrollo nativo e híbrido para iOS y Android con React Native y Flutter."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sistemas ERP",
+              "description": "Sistemas de planificación empresarial completos y modulares para gestión integral."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Diseño Web y UX/UI",
+              "description": "Sitios web responsive, landing pages de alto impacto y experiencias digitales memorables."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "E-Commerce",
+              "description": "Tiendas en línea robustas con pasarelas de pago y gestión de inventario."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Consultoría Tecnológica",
+              "description": "Asesoría estratégica para optimizar tu infraestructura y stack técnico."
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- Schema: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Nodesys",
+      "url": "https://nodesys.com.mx",
+      "description": "Empresa de desarrollo de software, web, sistemas y aplicaciones a la medida en Monterrey, México.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Nodesys"
+      },
+      "inLanguage": ["es", "en"]
+    }
+    </script>
+
+    <!-- Schema: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Nodesys - Desarrollo de Software a Medida",
+      "description": "Nodesys es una empresa de desarrollo de software, web, sistemas y aplicaciones a la medida en Monterrey. ERP, CRM, apps móviles y más desde 2019.",
+      "url": "https://nodesys.com.mx",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Nodesys",
+        "url": "https://nodesys.com.mx"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://nodesys.com.mx"
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tiempo tarda un proyecto promedio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de la complejidad. Un sitio web puede estar listo en 2-4 semanas, una app móvil en 6-12 semanas, y un sistema ERP completo entre 3-6 meses. Siempre proporcionamos un cronograma detallado antes de iniciar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Ofrecen soporte después del lanzamiento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, todos nuestros planes incluyen un período de soporte post-lanzamiento. Además, ofrecemos planes de mantenimiento extendido para garantizar que tu sistema funcione perfectamente a largo plazo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo solicitar cambios durante el desarrollo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutamente. Trabajamos con metodología ágil, lo que significa revisiones semanales donde puedes dar feedback y solicitar ajustes. Tu participación activa es clave para el éxito del proyecto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué tecnologías utilizan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Utilizamos un stack moderno que incluye React, Vue.js, Node.js, Python, Laravel, React Native, Flutter, AWS, Docker y más. Elegimos la tecnología que mejor se adapte a cada proyecto específico."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Trabajan con empresas fuera de México?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, trabajamos con clientes en toda Latinoamérica, Estados Unidos y España. Gracias a nuestras herramientas de colaboración remota, la distancia no es un obstáculo para entregar proyectos exitosos."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- =============================================
+         PRECONNECT Y DNS-PREFETCH
+    ============================================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+
+    <!-- =============================================
+         ESTILOS
+    ============================================= -->
     <!-- Bootstrap 5.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- AOS Animations -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <!-- Swiper CSS -->
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+    <!-- SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/styles.css" rel="stylesheet">
 </head>
@@ -30,7 +353,7 @@
     <div id="preloader">
         <div class="preloader-inner">
             <div class="spinner"></div>
-            <img src="img/logo.png" alt="NodeSys" class="preloader-logo">
+            <img src="img/logo.png" alt="Nodesys - Desarrollo de Software a Medida" class="preloader-logo" width="150" height="50" loading="eager">
         </div>
     </div>
 
@@ -40,7 +363,7 @@
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
         <div class="container">
             <a class="" href="#home">
-                <img src="img/logo.png" alt="NodeSys" class="nav-logo">
+                <img src="img/logo.png" alt="Nodesys - Desarrollo de Software a Medida" class="nav-logo" width="140" height="45" loading="eager">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -78,7 +401,7 @@
                 <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
                     <span class="hero-badge">
                         <i class="bi bi-lightning-charge-fill me-1"></i>
-                        Innovación desde 2021
+                        Innovación desde 2019
                     </span>
                     <h1 class="hero-title">
                         Transformamos tu empresa con 
@@ -131,7 +454,7 @@
                             <span>E-Commerce</span>
                         </div>
                         <div class="hero-center-circle">
-                            <img src="img/logo.png" alt="NodeSys" class="hero-logo-center">
+                            <img src="img/logo.png" alt="Nodesys - Soluciones tecnológicas a medida" class="hero-logo-center" width="80" height="80" loading="eager">
                             <div class="orbit orbit-1"></div>
                             <div class="orbit orbit-2"></div>
                             <div class="orbit orbit-3"></div>
@@ -181,7 +504,7 @@
                     <span class="section-subtitle">Sobre Nosotros</span>
                     <h2 class="section-title">Somos el aliado tecnológico que tu empresa necesita</h2>
                     <p class="section-description">
-                        Desde <strong>2021</strong>, en <strong>NodeSys</strong> nos hemos dedicado a transformar la manera en que las empresas 
+                        Desde <strong>2019</strong>, en <strong>Nodesys</strong> nos hemos dedicado a transformar la manera en que las empresas 
                         operan mediante soluciones tecnológicas innovadoras. Nuestro equipo multidisciplinario de 
                         ingenieros, diseñadores y estrategas digitales trabaja con pasión para crear herramientas 
                         que generan un retorno de inversión real.
@@ -570,7 +893,7 @@
                 <span class="section-subtitle">Clientes</span>
                 <h2 class="section-title">Confían en Nosotros</h2>
                 <p class="section-description mx-auto" style="max-width: 650px;">
-                    Empresas líderes de distintas industrias han elegido a NodeSys como su aliado 
+                    Empresas líderes de distintas industrias han elegido a Nodesys como su aliado 
                     estratégico en transformación digital.
                 </p>
             </div>
@@ -695,7 +1018,7 @@
                             <div class="testimonial-stars">
                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                             </div>
-                            <p class="testimonial-text">"NodeSys transformó completamente nuestra operación. El ERP que desarrollaron nos permitió reducir costos operativos en un 40% y aumentar la productividad de nuestro equipo significativamente."</p>
+                            <p class="testimonial-text">"Nodesys transformó completamente nuestra operación. El ERP que desarrollaron nos permitió reducir costos operativos en un 40% y aumentar la productividad de nuestro equipo significativamente."</p>
                             <div class="testimonial-author">
                                 <div class="author-avatar">
                                     <span>RM</span>
@@ -933,9 +1256,9 @@
                         <span class="team-role">CEO & Fundador</span>
                         <p>+10 años en desarrollo de software empresarial y estrategia digital.</p>
                         <div class="team-social">
-                            <a href="#"><i class="bi bi-linkedin"></i></a>
-                            <a href="#"><i class="bi bi-twitter-x"></i></a>
-                            <a href="#"><i class="bi bi-github"></i></a>
+                            <a href="#" aria-label="LinkedIn de Gonzalo Cavazos"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter de Gonzalo Cavazos"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" aria-label="GitHub de Gonzalo Cavazos"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -950,9 +1273,9 @@
                         <span class="team-role">CTO</span>
                         <p>Arquitecta de software con especialización en sistemas escalables y cloud.</p>
                         <div class="team-social">
-                            <a href="#"><i class="bi bi-linkedin"></i></a>
-                            <a href="#"><i class="bi bi-twitter-x"></i></a>
-                            <a href="#"><i class="bi bi-github"></i></a>
+                            <a href="#" aria-label="LinkedIn de Jose Barron"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter de Jose Barron"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" aria-label="GitHub de Jose Barron"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -967,9 +1290,9 @@
                         <span class="team-role">Lead Developer</span>
                         <p>Full-stack developer experto en React, Node.js y arquitectura de microservicios.</p>
                         <div class="team-social">
-                            <a href="#"><i class="bi bi-linkedin"></i></a>
-                            <a href="#"><i class="bi bi-twitter-x"></i></a>
-                            <a href="#"><i class="bi bi-github"></i></a>
+                            <a href="#" aria-label="LinkedIn de Eduardo Alvarez"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter de Eduardo Alvarez"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" aria-label="GitHub de Eduardo Alvarez"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -984,9 +1307,9 @@
                         <span class="team-role">Head of Design</span>
                         <p>Diseñadora UX/UI con pasión por crear experiencias digitales memorables.</p>
                         <div class="team-social">
-                            <a href="#"><i class="bi bi-linkedin"></i></a>
-                            <a href="#"><i class="bi bi-dribbble"></i></a>
-                            <a href="#"><i class="bi bi-behance"></i></a>
+                            <a href="#" aria-label="LinkedIn de Alfredo Ezqueda"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" aria-label="Dribbble de Alfredo Ezqueda"><i class="bi bi-dribbble"></i></a>
+                            <a href="#" aria-label="Behance de Alfredo Ezqueda"><i class="bi bi-behance"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1079,7 +1402,7 @@
                         <a href="#contact" class="btn btn-light btn-lg me-3">
                             <i class="bi bi-calendar-check me-2"></i>Agendar Consulta
                         </a>
-                        <a href="https://wa.me/5200000000" target="_blank" class="btn btn-outline-light btn-lg">
+                        <a href="https://wa.me/528122930709" target="_blank" class="btn btn-outline-light btn-lg">
                             <i class="bi bi-whatsapp me-2"></i>WhatsApp
                         </a>
                     </div>
@@ -1107,21 +1430,21 @@
                             <div class="contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
                             <div>
                                 <h6>Ubicación</h6>
-                                <p>Ciudad de México, México</p>
+                                <p>Monterrey, Nuevo León, México</p>
                             </div>
                         </div>
                         <div class="contact-info-item">
                             <div class="contact-icon"><i class="bi bi-envelope-fill"></i></div>
                             <div>
                                 <h6>Email</h6>
-                                <p>contacto@nodesys.com</p>
+                                <p><a href="mailto:contacto@nodesys.com.mx">contacto@nodesys.com.mx</a></p>
                             </div>
                         </div>
                         <div class="contact-info-item">
                             <div class="contact-icon"><i class="bi bi-telephone-fill"></i></div>
                             <div>
                                 <h6>Teléfono</h6>
-                                <p>+52 (55) 1234-5678</p>
+                                <p>+52 (81) 2293-0709</p>
                             </div>
                         </div>
                         <div class="contact-info-item">
@@ -1132,11 +1455,11 @@
                             </div>
                         </div>
                         <div class="contact-social mt-4">
-                            <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
-                            <a href="#" class="social-link"><i class="bi bi-github"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61580979374712" target="_blank" class="social-link" aria-label="Facebook de Nodesys"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="social-link" aria-label="Instagram de Nodesys"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/nodesys/" target="_blank" class="social-link" aria-label="LinkedIn de Nodesys"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter de Nodesys"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="social-link" aria-label="GitHub de Nodesys"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1304,16 +1627,16 @@
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-brand">
-                            <img src="img/logo.png" alt="NodeSys" class="footer-logo">
-                            <p class="mt-3">Transformamos empresas con tecnología inteligente desde 2021. 
+                            <img src="img/logo.png" alt="Nodesys - Desarrollo de Software a Medida" class="footer-logo" width="160" height="50" loading="lazy" decoding="async">
+                            <p class="mt-3">Transformamos empresas con tecnología inteligente desde 2019. 
                                Soluciones digitales a medida que optimizan recursos, tiempo y estrategia.</p>
                             <div class="footer-social mt-3">
-                                <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
-                                <a href="#"><i class="bi bi-linkedin"></i></a>
-                                <a href="#"><i class="bi bi-twitter-x"></i></a>
-                                <a href="#"><i class="bi bi-github"></i></a>
-                                <a href="#"><i class="bi bi-youtube"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=61580979374712" target="_blank" aria-label="Facebook de Nodesys"><i class="bi bi-facebook"></i></a>
+                                <a href="#" aria-label="Instagram de Nodesys"><i class="bi bi-instagram"></i></a>
+                                <a href="https://www.linkedin.com/company/nodesys/" target="_blank" aria-label="LinkedIn de Nodesys"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" aria-label="Twitter de Nodesys"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#" aria-label="GitHub de Nodesys"><i class="bi bi-github"></i></a>
+                                <a href="#" aria-label="YouTube de Nodesys"><i class="bi bi-youtube"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1351,8 +1674,8 @@
                             </div>
                         </form>
                         <div class="footer-contact mt-3">
-                            <p><i class="bi bi-envelope me-2"></i>contacto@nodesys.com</p>
-                            <p><i class="bi bi-telephone me-2"></i>+52 (55) 1234-5678</p>
+                            <p><i class="bi bi-envelope me-2"></i><a href="mailto:contacto@nodesys.com.mx">contacto@nodesys.com.mx</a></p>
+                            <p><i class="bi bi-telephone me-2"></i>+52 (81) 2293-0709</p>
                         </div>
                     </div>
                 </div>
@@ -1362,12 +1685,12 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p>&copy; 2021 - 2026 NodeSys. Todos los derechos reservados.</p>
+                        <p>&copy; 2019 - 2026 Nodesys. Todos los derechos reservados.</p>
                     </div>
                     <div class="col-md-6 text-md-end">
-                        <a href="#">Política de Privacidad</a>
+                        <a href="#" onclick="showPrivacidad(); return false;">Política de Privacidad</a>
                         <span class="mx-2">|</span>
-                        <a href="#">Términos de Uso</a>
+                        <a href="#" onclick="showTerminos(); return false;">Términos de Uso</a>
                     </div>
                 </div>
             </div>
@@ -1375,7 +1698,7 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <a href="#home" class="back-to-top" id="backToTop">
+    <a href="#home" class="back-to-top" id="backToTop" aria-label="Volver arriba">
         <i class="bi bi-chevron-up"></i>
     </a>
 
@@ -1388,6 +1711,8 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Custom JS -->
     <script src="js/main.js"></script>
 
