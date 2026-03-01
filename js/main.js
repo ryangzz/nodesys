@@ -198,6 +198,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // =============================================
+    // SOLUTIONS SWIPER
+    // =============================================
+    new Swiper('.solutionsSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        loop: true,
+        speed: 600,
+        autoplay: {
+            delay: 4500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.solutions-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.solutions-next',
+            prevEl: '.solutions-prev',
+        },
+        breakpoints: {
+            576: { slidesPerView: 2 },
+            992: { slidesPerView: 3 },
+            1200: { slidesPerView: 4 },
+        }
+    });
+
+    // =============================================
     // PORTFOLIO FILTER
     // =============================================
     const filterButtons = document.querySelectorAll('.filter-btn');
@@ -461,5 +488,82 @@ function showPrivacidad() {
         confirmButtonText: 'Entendido',
         confirmButtonColor: '#013b84',
         showCloseButton: true,
+    });
+}
+
+// =============================================
+// SOLICITAR INFO (Modal de interés por solución)
+// =============================================
+function solicitarInfo(solucion) {
+    Swal.fire({
+        title: `<span style="color:#013b84">${solucion}</span>`,
+        html: `
+            <p style="color:#666;margin-bottom:18px;">Déjanos tus datos y un asesor se pondrá en contacto contigo para brindarte información detallada sobre <strong>${solucion}</strong>.</p>
+            <form id="swalSolucionForm" style="text-align:left">
+                <div style="margin-bottom:12px">
+                    <label style="display:block;font-weight:600;font-size:.85rem;margin-bottom:4px;color:#333">Nombre completo *</label>
+                    <input id="swalNombre" type="text" class="swal2-input" placeholder="Tu nombre" style="margin:0;width:100%">
+                </div>
+                <div style="margin-bottom:12px">
+                    <label style="display:block;font-weight:600;font-size:.85rem;margin-bottom:4px;color:#333">Correo electrónico *</label>
+                    <input id="swalEmail" type="email" class="swal2-input" placeholder="correo@ejemplo.com" style="margin:0;width:100%">
+                </div>
+                <div style="margin-bottom:12px">
+                    <label style="display:block;font-weight:600;font-size:.85rem;margin-bottom:4px;color:#333">Teléfono</label>
+                    <input id="swalTelefono" type="tel" class="swal2-input" placeholder="10 dígitos" style="margin:0;width:100%">
+                </div>
+                <div style="margin-bottom:4px">
+                    <label style="display:block;font-weight:600;font-size:.85rem;margin-bottom:4px;color:#333">Mensaje (opcional)</label>
+                    <textarea id="swalMensaje" class="swal2-textarea" placeholder="Cuéntanos brevemente tu proyecto o necesidad…" style="margin:0;width:100%;min-height:80px"></textarea>
+                </div>
+            </form>
+        `,
+        width: 520,
+        showCancelButton: true,
+        confirmButtonText: '<i class="bi bi-send"></i> Enviar',
+        cancelButtonText: 'Cancelar',
+        confirmButtonColor: '#013b84',
+        cancelButtonColor: '#6c757d',
+        showCloseButton: true,
+        focusConfirm: false,
+        preConfirm: () => {
+            const nombre = document.getElementById('swalNombre').value.trim();
+            const email = document.getElementById('swalEmail').value.trim();
+            const telefono = document.getElementById('swalTelefono').value.trim();
+            const mensaje = document.getElementById('swalMensaje').value.trim();
+
+            if (!nombre || !email) {
+                Swal.showValidationMessage('Por favor ingresa tu nombre y correo electrónico');
+                return false;
+            }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                Swal.showValidationMessage('Ingresa un correo electrónico válido');
+                return false;
+            }
+            return { nombre, email, telefono, mensaje, solucion };
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const d = result.value;
+            const waText = encodeURIComponent(
+                `¡Hola Nodesys! 👋\n\nMe interesa: *${d.solucion}*\n\nNombre: ${d.nombre}\nCorreo: ${d.email}${d.telefono ? '\nTeléfono: ' + d.telefono : ''}${d.mensaje ? '\nMensaje: ' + d.mensaje : ''}`
+            );
+            const waURL = `https://wa.me/528122930709?text=${waText}`;
+
+            Swal.fire({
+                icon: 'success',
+                title: '¡Gracias por tu interés!',
+                html: `<p>Hemos recibido tu solicitud sobre <strong>${d.solucion}</strong>. También puedes contactarnos directamente:</p>`,
+                confirmButtonText: '<i class="bi bi-whatsapp"></i> Enviar por WhatsApp',
+                confirmButtonColor: '#25d366',
+                showCancelButton: true,
+                cancelButtonText: 'Cerrar',
+                cancelButtonColor: '#013b84',
+            }).then((r) => {
+                if (r.isConfirmed) {
+                    window.open(waURL, '_blank');
+                }
+            });
+        }
     });
 }

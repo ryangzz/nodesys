@@ -1322,13 +1322,13 @@ img {
 }
 
 /* =============================================
-   PRICING SECTION
+   SOLUTIONS SECTION (Carrusel de Cards)
    ============================================= */
-.pricing-card {
+.solution-card {
     background: var(--white);
     border: 2px solid #f0f0f0;
     border-radius: var(--radius-lg);
-    padding: 40px 30px;
+    padding: 35px 28px;
     text-align: center;
     transition: var(--transition);
     position: relative;
@@ -1337,117 +1337,128 @@ img {
     flex-direction: column;
 }
 
-.pricing-card:hover {
-    transform: translateY(-10px);
+.solution-card:hover {
+    transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
 }
 
-.pricing-card.featured {
-    border-color: var(--primary);
-    background: linear-gradient(180deg, rgba(0, 51, 124, 0.05) 0%, var(--white) 100%);
-    transform: scale(1.05);
-    box-shadow: var(--shadow-glow);
+.solution-card.solution-custom {
+    border: 2px dashed var(--primary);
+    background: linear-gradient(180deg, rgba(1, 59, 132, 0.04) 0%, var(--white) 100%);
 }
 
-.pricing-card.featured:hover {
-    transform: scale(1.05) translateY(-10px);
+.solution-card.solution-custom:hover {
+    border-style: solid;
+    border-color: var(--secondary);
 }
 
-.pricing-badge {
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--gradient-2);
-    color: var(--white);
-    padding: 6px 24px;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    white-space: nowrap;
-}
-
-.pricing-header {
-    padding-bottom: 24px;
-    border-bottom: 1px solid #f0f0f0;
-    margin-bottom: 24px;
-}
-
-.pricing-plan {
-    display: inline-block;
-    background: rgba(0, 51, 124, 0.1);
-    color: var(--primary);
-    padding: 4px 16px;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 16px;
-}
-
-.pricing-price {
+.solution-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
-    gap: 4px;
-    margin-bottom: 8px;
+    margin: 0 auto 20px;
+    transition: var(--transition);
 }
 
-.pricing-price .currency {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-dark);
+.solution-icon i {
+    font-size: 1.8rem;
+    color: var(--white);
 }
 
-.pricing-price .amount {
-    font-size: 3rem;
-    font-weight: 900;
+.solution-card:hover .solution-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.solution-card h5 {
     font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
     color: var(--text-dark);
-    line-height: 1;
 }
 
-.pricing-price .period {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-.pricing-desc {
+.solution-card p {
     color: var(--text-muted);
     font-size: 0.9rem;
-    margin: 0;
-}
-
-.pricing-features {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    margin-bottom: 30px;
+    line-height: 1.6;
+    margin-bottom: 16px;
     flex-grow: 1;
 }
 
-.pricing-features li {
-    padding: 10px 0;
-    border-bottom: 1px solid #f8f8f8;
+.solution-tags {
+    list-style: none;
+    padding: 0;
     display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.93rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 22px;
 }
 
-.pricing-features li i {
-    font-size: 1rem;
+.solution-tags li {
+    background: rgba(1, 59, 132, 0.08);
+    color: var(--primary);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: var(--transition);
 }
 
-.pricing-features li .bi-check-circle-fill {
-    color: var(--secondary);
+.solution-card:hover .solution-tags li {
+    background: rgba(1, 59, 132, 0.12);
 }
 
-.pricing-features li .bi-x-circle {
-    color: #ddd;
+/* Swiper controls solutions */
+.solutionsSwiper {
+    padding: 10px 5px 50px;
 }
 
-.pricing-features li.disabled {
-    color: #ccc;
+.solutionsSwiper .swiper-slide {
+    height: auto;
+}
+
+.solutions-prev,
+.solutions-next {
+    color: var(--primary) !important;
+    background: var(--white);
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50%;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.solutions-prev::after,
+.solutions-next::after {
+    font-size: 1rem !important;
+    font-weight: 900;
+}
+
+.solutions-prev:hover,
+.solutions-next:hover {
+    background: var(--primary);
+    color: var(--white) !important;
+    box-shadow: var(--shadow-md);
+}
+
+.solutions-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: var(--primary);
+    opacity: 0.25;
+    transition: var(--transition);
+}
+
+.solutions-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    width: 28px;
+    border-radius: 5px;
+    background: var(--gradient-2);
 }
 
 /* =============================================

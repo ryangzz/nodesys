@@ -377,7 +377,7 @@
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Portafolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#clients">Clientes</a></li>
                     <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pricing">Planes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#soluciones">Soluciones</a></li>
                     <li class="nav-item"><a class="nav-link" href="#team">Equipo</a></li>
                     <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
                     <li class="nav-item ms-lg-3">
@@ -1139,95 +1139,227 @@
     </section>
 
     <!-- =============================================
-         PRICING SECTION
+         SOLUCIONES SECTION (Carrusel de Cards)
     ============================================= -->
     <section id="pricing" class="section-padding">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <span class="section-subtitle">Planes</span>
-                <h2 class="section-title">Soluciones para cada presupuesto</h2>
-                <p class="section-description mx-auto" style="max-width: 650px;">
-                    Elige el plan que mejor se adapte a las necesidades de tu empresa. 
-                    Todos incluyen soporte y garantía.
+                <span class="section-subtitle">Soluciones</span>
+                <h2 class="section-title">Lo que podemos hacer por tu empresa</h2>
+                <p class="section-description mx-auto" style="max-width: 700px;">
+                    Ofrecemos soluciones tecnológicas integrales adaptadas a cada necesidad. 
+                    Selecciona la que te interese y cuéntanos sobre tu proyecto.
                 </p>
             </div>
-            <div class="row g-4 justify-content-center">
-                <!-- Plan Starter -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <span class="pricing-plan">Starter</span>
-                            <div class="pricing-price">
-                                <span class="currency">$</span>
-                                <span class="amount">2,999</span>
-                                <span class="period">USD</span>
+
+            <div class="swiper solutionsSwiper" data-aos="fade-up" data-aos-delay="200">
+                <div class="swiper-wrapper">
+
+                    <!-- Solución 1: Apps Móviles -->
+                    <div class="swiper-slide">
+                        <div class="solution-card">
+                            <div class="solution-icon" style="background: linear-gradient(135deg, #013b84 0%, #3568b0 100%);">
+                                <i class="bi bi-phone"></i>
                             </div>
-                            <p class="pricing-desc">Ideal para emprendedores y startups</p>
+                            <h5>Aplicaciones Móviles</h5>
+                            <p>Desarrollo de apps nativas e híbridas multiplataforma para Android e iOS con React Native y Flutter.</p>
+                            <ul class="solution-tags">
+                                <li>Android</li>
+                                <li>iOS</li>
+                                <li>React Native</li>
+                                <li>Flutter</li>
+                            </ul>
+                            <button class="btn btn-gradient w-100" onclick="solicitarInfo('Aplicaciones Móviles')">
+                                <i class="bi bi-send me-2"></i>Me interesa
+                            </button>
                         </div>
-                        <ul class="pricing-features">
-                            <li><i class="bi bi-check-circle-fill"></i> Landing Page / Sitio Web</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Diseño Responsive</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Panel Administrable básico</li>
-                            <li><i class="bi bi-check-circle-fill"></i> SEO Básico</li>
-                            <li><i class="bi bi-check-circle-fill"></i> 3 meses de soporte</li>
-                            <li class="disabled"><i class="bi bi-x-circle"></i> App Móvil</li>
-                            <li class="disabled"><i class="bi bi-x-circle"></i> Módulos ERP</li>
-                            <li class="disabled"><i class="bi bi-x-circle"></i> Integraciones avanzadas</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline-gradient w-100">Comenzar</a>
                     </div>
-                </div>
-                <!-- Plan Professional -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="pricing-card featured">
-                        <div class="pricing-badge">Más Popular</div>
-                        <div class="pricing-header">
-                            <span class="pricing-plan">Professional</span>
-                            <div class="pricing-price">
-                                <span class="currency">$</span>
-                                <span class="amount">9,999</span>
-                                <span class="period">USD</span>
+
+                    <!-- Solución 2: Desarrollo Web -->
+                    <div class="swiper-slide">
+                        <div class="solution-card">
+                            <div class="solution-icon" style="background: linear-gradient(135deg, #4fa748 0%, #7bc76a 100%);">
+                                <i class="bi bi-globe2"></i>
                             </div>
-                            <p class="pricing-desc">Para empresas en crecimiento</p>
+                            <h5>Desarrollo Web</h5>
+                            <p>Sitios web responsive, landing pages de alto impacto, portales corporativos y aplicaciones web progresivas.</p>
+                            <ul class="solution-tags">
+                                <li>Responsive</li>
+                                <li>PWA</li>
+                                <li>WordPress</li>
+                                <li>Vue / React</li>
+                            </ul>
+                            <button class="btn btn-gradient w-100" onclick="solicitarInfo('Desarrollo Web')">
+                                <i class="bi bi-send me-2"></i>Me interesa
+                            </button>
                         </div>
-                        <ul class="pricing-features">
-                            <li><i class="bi bi-check-circle-fill"></i> Sitio Web + E-Commerce</li>
-                            <li><i class="bi bi-check-circle-fill"></i> App Móvil (iOS o Android)</li>
-                            <li><i class="bi bi-check-circle-fill"></i> CRM / Admin Completo</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Pasarela de Pagos</li>
-                            <li><i class="bi bi-check-circle-fill"></i> SEO Avanzado</li>
-                            <li><i class="bi bi-check-circle-fill"></i> 6 meses de soporte</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Capacitación incluida</li>
-                            <li class="disabled"><i class="bi bi-x-circle"></i> ERP Completo</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-gradient w-100">Comenzar</a>
                     </div>
-                </div>
-                <!-- Plan Enterprise -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <span class="pricing-plan">Enterprise</span>
-                            <div class="pricing-price">
-                                <span class="currency">$</span>
-                                <span class="amount">Cotizar</span>
-                                <span class="period"></span>
+
+                    <!-- Solución 3: Sistemas ERP -->
+                    <div class="swiper-slide">
+                        <div class="solution-card">
+                            <div class="solution-icon" style="background: linear-gradient(135deg, #013b84 0%, #4fa748 100%);">
+                                <i class="bi bi-diagram-3"></i>
                             </div>
-                            <p class="pricing-desc">Soluciones a la medida empresarial</p>
+                            <h5>Sistemas ERP</h5>
+                            <p>Sistemas de planificación empresarial completos y modulares: inventarios, contabilidad, RRHH, producción y más.</p>
+                            <ul class="solution-tags">
+                                <li>Modular</li>
+                                <li>Cloud</li>
+                                <li>Escalable</li>
+                                <li>Multi-empresa</li>
+                            </ul>
+                            <button class="btn btn-gradient w-100" onclick="solicitarInfo('Sistemas ERP')">
+                                <i class="bi bi-send me-2"></i>Me interesa
+                            </button>
                         </div>
-                        <ul class="pricing-features">
-                            <li><i class="bi bi-check-circle-fill"></i> ERP / CRM / CMS Completo</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Apps iOS + Android</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Integraciones Ilimitadas</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Infraestructura Cloud</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Equipo Dedicado</li>
-                            <li><i class="bi bi-check-circle-fill"></i> 12 meses de soporte</li>
-                            <li><i class="bi bi-check-circle-fill"></i> SLA Garantizado</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Consultoría Estratégica</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline-gradient w-100">Cotizar Ahora</a>
                     </div>
+
+                    <!-- Solución 4: Sistemas CRM -->
+                    <div class="swiper-slide">
+                        <div class="solution-card">
+                            <div class="solution-icon" style="background: linear-gradient(135deg, #3568b0 0%, #013b84 100%);">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <h5>Sistemas CRM</h5>
+                            <p>Gestiona relaciones con clientes de forma inteligente. Automatiza ventas, marketing y soporte técnico.</p>
+                            <ul class="solution-tags">
+                                <li>Ventas</li>
+                                <li>Marketing</li>
+                                <li>Soporte</li>
+                                <li>Analytics</li>
+                            </ul>
+                            <button class="btn btn-gradient w-100" onclick="solicitarInfo('Sistemas CRM')">
+                                <i class="bi bi-send me-2"></i>Me interesa
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Solución 5: CMS -->
+                    <div class="swiper-slide">
+                        <div class="solution-card">
+                            <div class="solution-icon" style="background: linear-gradient(135deg, #4fa748 0%, #013b84 100%);">
+                                <i class="bi bi-file-earmark-code"></i>
+                            </div>
+                            <h5>Sistemas CMS</h5>
+                            <p>Administradores de contenido personalizados para gestionar tu sitio web, blog, catálogos y más sin depender de un desarrollador.</p>
+                            <ul class="solution-tags">
+                                <li>Blog</li>
+                                <li>Catálogos</li>
+                                <li>Multi-usuario</li>
+                                <li>SEO</li>
+                            </ul>
+                            <button class="btn btn-gradient w-100" onclick="solicitarInfo('Sistemas CMS')">
+                                <i class="bi bi-send me-2"></i>Me interesa
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Solución 6: E-Commerce -->
+                    <div class="swiper-slide">
+                        <div class="solution-card">
+                            <div class="solution-icon" style="background: linear-gradient(135deg, #013b84 0%, #3568b0 100%);">
+                                <i class="bi bi-cart4"></i>
+                            </div>
+                            <h5>E-Commerce</h5>
+                            <p>Tiendas en línea robustas con pasarelas de pago, gestión de inventario, logística integrada y experiencias de compra optimizadas.</p>
+                            <ul class="solution-tags">
+                                <li>Shopify</li>
+                                <li>WooCommerce</li>
+                                <li>Custom</li>
+                                <li>Pagos</li>
+                            </ul>
+                            <button class="btn btn-gradient w-100" onclick="solicitarInfo('E-Commerce')">
+                                <i class="bi bi-send me-2"></i>Me interesa
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Solución 7: Punto de Venta -->
+                    <div class="swiper-slide">
+                        <div class="solution-card">
+                            <div class="solution-icon" style="background: linear-gradient(135deg, #4fa748 0%, #7bc76a 100%);">
+                                <i class="bi bi-upc-scan"></i>
+                            </div>
+                            <h5>Punto de Venta (POS)</h5>
+                            <p>Sistemas de punto de venta ágiles y confiables para tu negocio: facturación, inventario, cortes de caja y reportes en tiempo real.</p>
+                            <ul class="solution-tags">
+                                <li>Facturación</li>
+                                <li>Inventario</li>
+                                <li>Reportes</li>
+                                <li>Multi-sucursal</li>
+                            </ul>
+                            <button class="btn btn-gradient w-100" onclick="solicitarInfo('Punto de Venta (POS)')">
+                                <i class="bi bi-send me-2"></i>Me interesa
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Solución 8: Migraciones -->
+                    <div class="swiper-slide">
+                        <div class="solution-card">
+                            <div class="solution-icon" style="background: linear-gradient(135deg, #012f6b 0%, #3568b0 100%);">
+                                <i class="bi bi-cloud-arrow-up"></i>
+                            </div>
+                            <h5>Migraciones</h5>
+                            <p>Migración de datos, sistemas legados, servidores y plataformas. Llevamos tu infraestructura al siguiente nivel sin perder información.</p>
+                            <ul class="solution-tags">
+                                <li>Cloud</li>
+                                <li>Base de datos</li>
+                                <li>Servidores</li>
+                                <li>Legacy</li>
+                            </ul>
+                            <button class="btn btn-gradient w-100" onclick="solicitarInfo('Migraciones')">
+                                <i class="bi bi-send me-2"></i>Me interesa
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Solución 9: Transformación Digital & SEO -->
+                    <div class="swiper-slide">
+                        <div class="solution-card">
+                            <div class="solution-icon" style="background: linear-gradient(135deg, #013b84 0%, #4fa748 100%);">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+                            <h5>Transformación Digital & SEO</h5>
+                            <p>Estrategias de transformación digital, posicionamiento web (SEO), optimización de procesos y consultoría tecnológica integral.</p>
+                            <ul class="solution-tags">
+                                <li>SEO</li>
+                                <li>Estrategia</li>
+                                <li>Procesos</li>
+                                <li>Consultoría</li>
+                            </ul>
+                            <button class="btn btn-gradient w-100" onclick="solicitarInfo('Transformación Digital & SEO')">
+                                <i class="bi bi-send me-2"></i>Me interesa
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Solución 10: Soluciones a la Medida -->
+                    <div class="swiper-slide">
+                        <div class="solution-card solution-custom">
+                            <div class="solution-icon" style="background: linear-gradient(135deg, #013b84 0%, #4fa748 50%, #013b84 100%);">
+                                <i class="bi bi-gear-wide-connected"></i>
+                            </div>
+                            <h5>Soluciones a la Medida</h5>
+                            <p>¿Tu proyecto no encaja en las opciones anteriores? No te preocupes. Desarrollamos cualquier sistema personalizado que tu negocio necesite.</p>
+                            <ul class="solution-tags">
+                                <li>100% Custom</li>
+                                <li>APIs</li>
+                                <li>Integraciones</li>
+                                <li>Dashboards</li>
+                            </ul>
+                            <button class="btn btn-gradient w-100" onclick="solicitarInfo('Soluciones a la Medida')">
+                                <i class="bi bi-chat-dots me-2"></i>Platícanos tu idea
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
+                <!-- Controles del carrusel -->
+                <div class="swiper-pagination solutions-pagination mt-4"></div>
+                <div class="swiper-button-prev solutions-prev"></div>
+                <div class="swiper-button-next solutions-next"></div>
             </div>
         </div>
     </section>
