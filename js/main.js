@@ -198,6 +198,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // =============================================
+    // TEAM SWIPER
+    // =============================================
+    new Swiper('.teamSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        speed: 600,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.team-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            576: { slidesPerView: 2 },
+            992: { slidesPerView: 3 },
+            1200: { slidesPerView: 4 },
+        }
+    });
+
+    // =============================================
     // SOLUTIONS SWIPER
     // =============================================
     new Swiper('.solutionsSwiper', {
